@@ -8,6 +8,13 @@ void addReading(const std::string& label, double value,
                 std::string labels[], double values[],
                 int& size, int capacity) {
     // TODO: throw "Full" if size == capacity, else insert and ++size
+    if (size == capacity) {
+        throw "Full";
+    } else {
+        labels[size] = label; // Append label to labels
+        values[size] = value; // Append value to values
+        size++; // Increment size by 1
+    }
 }
 
 void updateValue(double* valuePtr, double newValue) {
