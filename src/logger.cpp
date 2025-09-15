@@ -24,6 +24,7 @@ void updateValue(double* valuePtr, double newValue) {
 
 void printReading(const std::string& label, const double& value) {
     // TODO: pretty-print one reading
+    std::cout << label << ": " << value << std::endl;
 }
 
 double average(const double values[], int size) {
