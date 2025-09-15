@@ -42,7 +42,21 @@ double average(const double values[], int size) {
 
 double minValue(const double values[], int size) {
     // TODO: throw "Empty" if size==0, else compute min
-    return 0.0;
+    if (size == 0) {
+        throw "Empty";
+    } else if (size == 1) {
+        return values[0];
+    } else {
+        double min = values[0];
+        double curr;
+        for (int i = 1; i < size; i++) {
+            curr = values[i];
+            if (curr < min) {
+                min = curr;
+            }
+        }
+        return min;
+    }
 }
 
 double maxValue(const double values[], int size) {
