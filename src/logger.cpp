@@ -19,6 +19,7 @@ void addReading(const std::string& label, double value,
 
 void updateValue(double* valuePtr, double newValue) {
     // TODO: write through pointer
+    *valuePtr = newValue;
 }
 
 void printReading(const std::string& label, const double& value) {
